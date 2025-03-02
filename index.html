@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Retro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-info">
+            <div class="next-piece-container">
+                <h3>Siguiente:</h3>
+                <canvas id="next-piece" width="80" height="80"></canvas>
+            </div>
+            <div class="stats">
+                <div class="score">Puntuación: <span id="score">0</span></div>
+                <div class="speed">Aumentos de Velocidad: <span id="speed">0</span></div>
+            </div>
+        </div>
+        
+        <div class="game-layout">
+            <canvas id="tetris" width="240" height="400"></canvas>
+            
+            <div class="pieces-stats">
+                <h3>Piezas:</h3>
+                <div class="piece-counter">
+                    <canvas id="piece-T" width="60" height="60"></canvas>
+                    <span id="count-T">0</span>
+                </div>
+                <div class="piece-counter">
+                    <canvas id="piece-J" width="60" height="60"></canvas>
+                    <span id="count-J">0</span>
+                </div>
+                <div class="piece-counter">
+                    <canvas id="piece-Z" width="60" height="60"></canvas>
+                    <span id="count-Z">0</span>
+                </div>
+                <div class="piece-counter">
+                    <canvas id="piece-O" width="60" height="60"></canvas>
+                    <span id="count-O">0</span>
+                </div>
+                <div class="piece-counter">
+                    <canvas id="piece-S" width="60" height="60"></canvas>
+                    <span id="count-S">0</span>
+                </div>
+                <div class="piece-counter">
+                    <canvas id="piece-L" width="60" height="60"></canvas>
+                    <span id="count-L">0</span>
+                </div>
+                <div class="piece-counter">
+                    <canvas id="piece-I" width="60" height="60"></canvas>
+                    <span id="count-I">0</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <p>Controles:</p>
+            <ul>
+                <li>⬅️ Mover Izquierda</li>
+                <li>➡️ Mover Derecha</li>
+                <li>⬇️ Acelerar Caída</li>
+                <li>⬆️ Rotar Pieza</li>
+                <li>Q Rotar Izquierda</li>
+                <li>W Rotar Derecha</li>
+            </ul>
+        </div>
+        
+        <!-- Pantalla de Game Over -->
+        <div id="game-over" class="game-over">
+            <div class="game-over-content">
+                <h2>¡GAME OVER!</h2>
+                <button id="restart-button">Jugar de nuevo</button>
+                <p>O presiona ESPACIO para reiniciar</p>
+            </div>
+        </div>
+    </div>
+    <script src="tetris.js"></script>
+</body>
+</html>
